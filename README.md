@@ -2,18 +2,18 @@
 
 Lista:
 
-- [ ] Inserção Direta - Leo
+- [x] Inserção Direta - Leo
 - [ ] Inserção Binária - Jess
 - [ ] Seleção Direta - Jess
-- [ ] Bolha - Leo
-- [ ] Shake - Leo
+- [x] Bolha - Leo
+- [x] Shake - Leo
 - [ ] Shell - Jess
 - [ ] Heap - Jess
 - [ ] Quick com pivô - Leo
 - [ ] Quick sem pivô - Jess
 - [ ] Merge 1 - Leo
 - [ ] Merge 2 - Jess
-- [ ] Counting - Leo
+- [x] Counting - Leo
 - [ ] Bucket - Leo
 - [ ] Radix - Jess
 - [ ] Comb - Leo
