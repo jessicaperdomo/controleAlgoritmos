@@ -1,6 +1,6 @@
 public class Node {
-    int value;
-    Node prox,ant;
+    private int value;
+    private Node prox,ant;
 
     public Node(int value, Node prox, Node ant) {
         this.value = value;

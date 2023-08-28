@@ -117,4 +117,20 @@ public class Lista {
             }
         }while(swapped);
     }
+
+    public void gnomeSort(){
+        Node aux = start;
+        int value;
+        while(aux != null){
+            if(aux==start || aux.getAnt().getValue()<= aux.getValue()){
+                aux = aux.getProx();
+            }
+            else{
+                value = aux.getAnt().getValue();
+                aux.getAnt().setValue(aux.getValue());
+                aux.setValue(value);
+                aux = aux.getAnt();
+            }
+        }
+    }
 }
