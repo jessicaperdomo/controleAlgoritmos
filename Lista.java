@@ -27,6 +27,16 @@ public class Lista {
         }
     }
 
+    public Node getIndex(int n){
+        int i=0;
+        Node aux = start;
+        while(i!=n && aux!=null){
+            i++;
+            aux = aux.getProx();
+        }
+        return aux;
+    }
+
     public void showList(){
         Node aux = start;
         while(aux != null){
