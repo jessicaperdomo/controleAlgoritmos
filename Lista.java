@@ -6,6 +6,15 @@ public class Lista {
         this.end = end;
     }
 
+    public Lista() {
+        this.start = null;
+        this.end = null;
+    }
+
+    public Node getStart() {
+        return start;
+    }
+
     public void insertList(int value){
         Node novo = new Node(value,null,null);
         if(start==null){
@@ -22,6 +31,7 @@ public class Lista {
         Node aux = start;
         while(aux != null){
             System.out.print(aux.getValue() + " ");
+            aux = aux.getProx();
         }
         System.out.println();
     }
@@ -53,6 +63,7 @@ public class Lista {
                     aux2.setValue(aux2.getProx().getValue());
                     aux2.getProx().setValue(value);
                 }
+                aux2 = aux2.getProx();
             }
             aux = aux.getProx();
         }
@@ -72,6 +83,7 @@ public class Lista {
             aux = start;
             while(aux != null){
                 cont[aux.getValue()]++;
+                aux = aux.getProx();
             }
             aux = start;
             for(int a = 0;a <= maxValue;a++){
@@ -105,7 +117,7 @@ public class Lista {
                 swapped = false;
                 aux = top;
                 while(aux != bottom){
-                    if(aux.getValue() > aux.getAnt().getValue()){
+                    if(aux.getValue() < aux.getAnt().getValue()){
                         value = aux.getValue();
                         aux.setValue(aux.getAnt().getValue());
                         aux.getAnt().setValue(value);
@@ -133,4 +145,41 @@ public class Lista {
             }
         }
     }
+
+    public void bucketSort(int n){
+        if(start != null){
+            int maxValue = start.getValue();
+            Node aux = start.getProx(),aux2;
+            while(aux != null){
+                if(maxValue < aux.getValue()){
+                    maxValue = aux.getValue();
+                }
+                aux = aux.getProx();
+            }
+            Lista balde[] = new Lista[n];
+            for (int i = 0; i < n; i++) {
+                balde[i] = new Lista();
+            }
+            aux = start;
+            while(aux != null){
+                int pos = (int) ((aux.getValue()*1.0)/maxValue)*(n-1);
+                balde[pos].insertList(aux.getValue());
+                aux = aux.getProx();
+            }
+            for(int a=0;a < n; a++){
+                balde[a].bubbleSort();
+            }
+            aux = start;
+            for(int a=0;a < n; a++){
+                aux2 = balde[a].getStart();
+                while(aux2!=null){
+                    aux.setValue(aux2.getValue());
+                    aux = aux.getProx();
+                    aux2 = aux2.getProx();
+                }
+            }
+        }
+    }
+
+
 }
