@@ -14,7 +14,7 @@ Lista:
 - [ ] Merge 1 - Leo
 - [ ] Merge 2 - Jess
 - [x] Counting - Leo
-- [ ] Bucket - Leo
+- [x] Bucket - Leo
 - [ ] Radix - Jess
 - [ ] Comb - Leo
 - [x] Gnome - Leo

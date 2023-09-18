@@ -191,5 +191,34 @@ public class Lista {
         }
     }
 
+    public void combSort(){
+        int gap = 0,tl;
+        boolean trocas = true;
+        Lista ajd = new Lista();
+        Node aux = start,aux2;
+        while(aux != null){
+            gap++;
+            aux = aux.getProx();
+        }
+        tl = gap;
+        while (gap > 1 || trocas) {
+            if (gap > 1){
+                gap = (int) (gap / 1.3);
+            }
+            int i = 0;
+            trocas = false;
+            while (i + gap < tl) {
+                aux = getIndex(i);
+                aux2 = getIndex(i+gap);
+                if(aux.getValue() > aux2.getValue()){
+                    int swap = aux.getValue();
+                    aux.setValue(aux2.getValue());
+                    aux2.setValue(swap);
+                    trocas = true;
+                }
+                i++;
+            }
+        }
+    }
 
 }
