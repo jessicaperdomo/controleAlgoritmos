@@ -207,15 +207,17 @@ public class Lista {
             }
             int i = 0;
             trocas = false;
+            aux = getIndex(0);
+            aux2 = getIndex(gap);
             while (i + gap < tl) {
-                aux = getIndex(i);
-                aux2 = getIndex(i+gap);
                 if(aux.getValue() > aux2.getValue()){
                     int swap = aux.getValue();
                     aux.setValue(aux2.getValue());
                     aux2.setValue(swap);
                     trocas = true;
                 }
+                aux = aux.getProx();
+                aux2 = aux2.getProx();
                 i++;
             }
         }
