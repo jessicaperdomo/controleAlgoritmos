@@ -16,7 +16,7 @@ Lista:
 - [x] Counting - Leo
 - [x] Bucket - Leo
 - [ ] Radix - Jess
-- [ ] Comb - Leo
+- [x] Comb - Leo
 - [x] Gnome - Leo
 - [ ] Tim - Jess
 

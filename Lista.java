@@ -64,14 +64,14 @@ public class Lista {
 
     public void bubbleSort(){
         Node aux = start,aux2;
-        int value;
+        int valor;
         while(aux != null){
-            aux2 = aux;
+            aux2 = start;
             while(aux2.getProx() != null){
                 if(aux2.getValue() > aux2.getProx().getValue()){
-                    value = aux2.getValue();
+                    valor = aux2.getValue();
                     aux2.setValue(aux2.getProx().getValue());
-                    aux2.getProx().setValue(value);
+                    aux2.getProx().setValue(valor);
                 }
                 aux2 = aux2.getProx();
             }
@@ -220,6 +220,66 @@ public class Lista {
                 aux2 = aux2.getProx();
                 i++;
             }
+        }
+    }
+
+    private void fusao(Lista list1, Lista list2, int seq,int TL) {
+        int i=0, j=0, k=0, tam=seq;
+        Node aux = start, aux1 = list1.getStart(), aux2 = list2.getStart() ;
+        while(k < TL) {
+            while (i < seq && j < seq) {
+                if (aux1.getValue() < aux2.getValue()) {
+                    aux.setValue(aux1.getValue());
+                    aux = aux.getProx();
+                    aux1 = aux1.getProx();
+                    k++; i++;
+                } else {
+                    aux.setValue(aux2.getValue());
+                    aux = aux.getProx();
+                    aux2 = aux2.getProx();
+                    k++; j++;
+                }
+            }
+
+            while (i < seq) {
+                aux.setValue(aux1.getValue());
+                aux = aux.getProx();
+                aux1 = aux1.getProx();
+                k++; i++;
+            }
+            while (j < seq) {
+                aux.setValue(aux2.getValue());
+                aux = aux.getProx();
+                aux2 = aux2.getProx();
+                k++; j++;
+            }
+            seq = seq + tam;
+        }
+    }
+
+    private Lista particao(int i, int TL) {
+        Lista lista = new Lista();
+        Node aux=getIndex(i);
+        while(TL>0){
+            lista.insertList(aux.getValue());
+            TL--;
+            aux = aux.getProx();
+        }
+        return lista;
+    }
+    public void mergeSort1(){
+        Lista list1,list2;
+        Node aux=start;
+        int seq=1,TL=0;
+        while(aux!=null){
+            TL++;
+            aux = aux.getProx();
+        }
+        while(seq < TL){
+            list1 = particao(0,TL/2);
+            list2 = particao(TL/2,TL/2);
+            fusao(list1, list2, seq,TL);
+            seq = seq*2;
         }
     }
 
