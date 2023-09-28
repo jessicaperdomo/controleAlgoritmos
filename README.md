@@ -9,9 +9,9 @@ Lista:
 - [x] Shake - Leo
 - [ ] Shell - Jess
 - [ ] Heap - Jess
-- [ ] Quick com pivô - Leo
+- [x] Quick com pivô - Leo
 - [ ] Quick sem pivô - Jess
-- [ ] Merge 1 - Leo
+- [x] Merge 1 - Leo
 - [ ] Merge 2 - Jess
 - [x] Counting - Leo
 - [x] Bucket - Leo

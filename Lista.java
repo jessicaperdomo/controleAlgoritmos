@@ -283,4 +283,48 @@ public class Lista {
         }
     }
 
+    public int particaoQuick(int esq,int dir){
+        int x = getIndex((esq+dir)/2).getValue();
+        int i = esq,j = dir,valor;
+        Node aux = getIndex(i), aux2 = getIndex(j);
+        do{
+            while(x > aux.getValue()){
+                i++;
+                aux = aux.getProx();
+            }
+            while(x < aux2.getValue()){
+                j--;
+                aux2 = aux2.getAnt();
+            }
+            if(i<=j){
+                valor = aux.getValue();
+                aux.setValue(aux2.getValue());
+                aux2.setValue(valor);
+                i++;
+                j--;
+                aux = aux.getProx();
+                aux2 = aux2.getAnt();
+            }
+        }while(i<=j);
+        return i;
+    }
+
+    public void ordena(int esq,int dir){
+        if(esq<dir){
+            int m = particaoQuick(esq, dir);
+            ordena(esq,m-1);
+            ordena(m+1,dir);
+        }
+    }
+
+    public void quickSortPivo(){
+        int TL=0;
+        Node aux = start;
+        while(aux!=null){
+            TL++;
+            aux = aux.getProx();
+        }
+        ordena(0,TL-1);
+    }
+
 }
