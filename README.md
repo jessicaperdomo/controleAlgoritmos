@@ -3,22 +3,22 @@
 Lista:
 
 - [x] Inserção Direta - Leo
-- [ ] Inserção Binária - Jess
-- [ ] Seleção Direta - Jess
+- [x] Inserção Binária - Jess
+- [x] Seleção Direta - Jess
 - [x] Bolha - Leo
 - [x] Shake - Leo
-- [ ] Shell - Jess
-- [ ] Heap - Jess
+- [x] Shell - Jess
+- [x] Heap - Jess
 - [x] Quick com pivô - Leo
-- [ ] Quick sem pivô - Jess
+- [x] Quick sem pivô - Jess
 - [x] Merge 1 - Leo
-- [ ] Merge 2 - Jess
+- [x] Merge 2 - Jess
 - [x] Counting - Leo
 - [x] Bucket - Leo
-- [ ] Radix - Jess
+- [x] Radix - Jess
 - [x] Comb - Leo
 - [x] Gnome - Leo
-- [ ] Tim - Jess
+- [x] Tim - Jess
 
 
 Arquivo:
