@@ -23,7 +23,7 @@ Lista:
 
 Arquivo:
 
-- [ ] Inserção Direta - Jess
+- [x] Inserção Direta - Jess
 - [ ] Inserção Binária - Leo
 - [ ] Seleção Direta - Leo
 - [ ] Bolha - Jess

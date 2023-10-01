@@ -1,8 +1,10 @@
-import java.util.Date;
+import java.io.*;
 
 public class Aplicacao {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        // Testando lista
         Lista list = new Lista(null,null);
 
         for(int i=8;i>=0;i--)
@@ -20,5 +22,10 @@ public class Aplicacao {
         System.out.println("Tempo de execução: " + tempoExecucao + " milissegundos");
 
         list.showList();
+
+        // Arquivo
+
+        Principal principal = new Principal();
+        principal.geraTabela();
     }
 }
