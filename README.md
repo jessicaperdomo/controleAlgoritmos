@@ -26,18 +26,18 @@ Arquivo:
 - [x] Inserção Direta - Jess
 - [ ] Inserção Binária - Leo
 - [ ] Seleção Direta - Leo
-- [ ] Bolha - Jess
-- [ ] Shake - Jess
+- [x] Bolha - Jess
+- [x] Shake - Jess
 - [ ] Shell - Leo
 - [ ] Heap - Leo
-- [ ] Quick com pivô - Jess
+- [x] Quick com pivô - Jess
 - [ ] Quick sem pivô - Leo
-- [ ] Merge 1 - Jess
+- [x] Merge 1 - Jess
 - [ ] Merge 2 - Leo
-- [ ] Counting - Jess
-- [ ] Bucket -  Jess
+- [x] Counting - Jess
+- [x] Bucket -  Jess
 - [ ] Radix - Leo
-- [ ] Comb - Jess
-- [ ] Gnome - Jess
+- [x] Comb - Jess
+- [x] Gnome - Jess
 - [ ] Tim - Leo 
 
